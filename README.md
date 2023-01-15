@@ -18,6 +18,8 @@ npm install --save-dev eslint prettier
 
 npm run lint -> to run eslint checks
 
+For format the code using prettier
+
 ## Run the project
 npm run build
 npx serve -s build
