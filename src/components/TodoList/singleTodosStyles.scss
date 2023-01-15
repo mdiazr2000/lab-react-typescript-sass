@@ -1,0 +1,33 @@
+@use "src/styles/base_icon";
+@use "src/styles/media_responsive";
+
+.todos_single {
+  display: flex;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 15px;
+  background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+  transition: 0.2s;
+
+  .todos_single_text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .icon {
+    @include base_icon.icon;
+  }
+}
+
+.drag {
+  box-shadow: 0 0 20px black;
+}
+
+@include media_responsive.for-laptop-size(media_responsive.$laptopSize);
+@include media_responsive.for-tablet-size(media_responsive.$tabletSize);

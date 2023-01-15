@@ -1,6 +1,44 @@
+@use "src/styles/media_responsive";
+@use "src/styles/partial_input";
+
 .todos {
-  display: flex;
+  @extend %todo-base;
+  width: 47.5%;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 5px;
   justify-content: space-evenly;
-  width: 90%;
-  flex-wrap: wrap;
+  background-color: rgb(50, 195, 205);
+}
+
+.container {
+  display: flex;
+  width: 95%;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.todos_heading {
+  font-size: 30px;
+  color: white;
+}
+
+.remove {
+  background-color: rgb(235, 103, 80);
+}
+
+@media (max-width: 1100px) {
+  .todos {
+    width: 45%;
+  }
+}
+@include media_responsive.for-tablet-size(media_responsive.$tabletSize);
+
+.dragactive {
+  background-color: rgb(0, 211, 236);
+}
+
+.dragcomplete {
+  background-color: rgb(255, 38, 0);
 }

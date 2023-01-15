@@ -1,10 +1,22 @@
+@use "src/styles/partial_input";
+@use "src/styles/media_responsive";
+
 .input {
   display: flex;
-  width: 90%;
+  width: 95%;
   position: relative;
   align-items: center;
 
+  .input_box {
+    @include partial_input.box;
+  }
 
+  .input_submit {
+    @include partial_input.button;
+  }
 }
+
+@include media_responsive.for-laptop-size(media_responsive.$laptopSize);
+@include media_responsive.for-tablet-size(media_responsive.$tabletSize);
 
 

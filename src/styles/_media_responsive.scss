@@ -1,0 +1,30 @@
+$tabletSize: 700px;
+$laptopSize: 1200px;
+
+@mixin for-tablet-size($tabletSize: 700px) {
+  @media (max-width: $tabletSize) {
+    .input {
+      width: 95%;
+    }
+    .todos {
+      width: 95%;
+      margin-bottom: 10px;
+    }
+    .container {
+      width: 95%;
+      flex-direction: column;
+    }
+    .todos_single {
+      width: 94%;
+    }
+  }
+}
+
+@mixin for-laptop-size($laptopSize: 1200px) {
+  @media (max-width: $laptopSize) {
+    .todos_single {
+      width: 40%;
+    }
+  }
+
+}
